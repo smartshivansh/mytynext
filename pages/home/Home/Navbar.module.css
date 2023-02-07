@@ -1,0 +1,31 @@
+.navbar__link {
+    margin-right: 1rem;
+    font-size: 16px;
+    /* font-family: "Roboto", sans-serif; */
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-indent: 0.2em;
+    color: #181818;
+  }
+  
+  .navbar__link:hover {
+    transform: translateY(-2px);
+  }
+  
+  .navbar__link--active {
+    border-bottom: 2px solid #f6d029;
+    transition: border-bottom 0.5s ease-in-out;
+  }
+  
+  .navbar__link_mobile {
+    display: block;
+    border: 1px solid rgb(207, 207, 207);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+  }
+  .navbar__link_mobile--active {
+    border: 2px solid #f6d029;
+    transition: border-bottom 0.5s ease-in-out;
+  }
+  
