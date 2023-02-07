@@ -1,0 +1,13 @@
+.cards .card-options {
+  visibility: hidden;
+}
+
+.cards:hover .card-options {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1025px) {
+  .cards .card-options {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,71 @@
+.dialog_wrapper {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.dialog_content_overlay_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.dialog_overlay {
+  position: fixed;
+  inset: 0px 0px 0px 0px;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.dialog_content {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 0.25rem;
+}
+
+.confirmation_dialog_overlay {
+  position: fixed;
+  inset: 0px 0px 0px 0px;
+  background-color: black;
+  opacity: 0.5;
+  height: 100vh;
+}
+
+.feeds_overlay_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 100vh;
+}
+
+.feeds_sidebar {
+  z-index: 10;
+  background-color: white;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.feeds_sidebar_width {
+  width: 75vw;
+  max-width: 640px;
+}
+
+.toShow {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  place-items: end;
+  overflow: auto;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1rem 1rem;
+}
+.myDIV:hover + .toShow {
+  display: flex;
+  background-color: rgba(22, 22, 22, 0.49);
+  color: white;
+}

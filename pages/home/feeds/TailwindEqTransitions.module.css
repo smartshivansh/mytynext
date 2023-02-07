@@ -1,0 +1,74 @@
+/* Overlay */
+.overlay-enter {
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+}
+.overlay-enter-from {
+  opacity: 0;
+}
+.overlay-enter-to {
+  opacity: 1;
+}
+
+.overlay-leave {
+  transition-timing-function: ease-in;
+  transition-duration: 100ms;
+}
+.overlay-leave-from {
+  opacity: 1;
+}
+.overlay-leave-to {
+  opacity: 0;
+}
+
+/* Content */
+.content-enter {
+  transition-timing-function: ease-out;
+  transition-duration: 250ms;
+  right: 0;
+}
+.content-enter-from {
+  opacity: 0;
+}
+.content-enter-to {
+  opacity: 1;
+}
+
+.content-leave {
+  transition-timing-function: ease-in;
+  transition-duration: 100ms;
+}
+.content-leave-from {
+  opacity: 1;
+}
+.content-leave-to {
+  opacity: 0;
+}
+
+/* Minor animation for website preview slider */
+.dialog-slide {
+  opacity: 0;
+  transform: translateX(1rem);
+
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+}
+
+.dialog-slide-in {
+  opacity: 1;
+  transform: translateX(0rem);
+
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+}
+
+.dialog-slide-out {
+  opacity: 0;
+  transform: translateX(1rem);
+
+  transition-property: all;
+  transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+}

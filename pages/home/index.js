@@ -1,5 +1,6 @@
 import Home from "./Home/Home"
 import SearchBox from "./SearchBox/SearchBox";
+import Feeds from "./feeds/Feeds";
 
 
 export default function Homepage(){
@@ -10,7 +11,7 @@ export default function Homepage(){
               <div className="sticky-top py-2 bg-white" style={{ zIndex: 1 }}>
                 {/* <SearchBox /> */}
               </div>
-              {/* <Feeds /> */}
+              <Feeds />
             </div>
     </div>
 }
