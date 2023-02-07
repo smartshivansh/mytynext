@@ -8,7 +8,7 @@ export default function Homepage(){
     <Home />
             <div className="container">
               <div className="sticky-top py-2 bg-white" style={{ zIndex: 1 }}>
-                <SearchBox />
+                {/* <SearchBox /> */}
               </div>
               {/* <Feeds /> */}
             </div>
