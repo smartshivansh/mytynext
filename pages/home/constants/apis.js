@@ -1,4 +1,5 @@
-const api = process.env.REACT_APP_API;
+// const api = process.env.REACT_APP_API;
+const api = "http://localhost:8080"
 
 const apis = {
   authenticate: `${api}/user`,
@@ -50,5 +51,8 @@ const apis = {
   // searchSuggestionResults: `https://mytym.in/api/search/suggestion`,
 
   getWebsiteDataBySubdomain: (subdomain) => `${api}/website/${subdomain}`,
+
+  feeds: `${api}/api/blog/feeds`,
+  fullFeeds: `${api}/api/feeds/fullfeeds`
 };
 export default apis;

@@ -1,3 +1,4 @@
+import apis from '@/pages/home/constants/apis';
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -58,7 +59,7 @@ export const setFeedDataAsync = (feedData) => async (dispatch) => {
   dispatch(setLoading(true));
 
   try {
-    const { data } = await axios.post(`/api/blog/feeds`, feedData);
+    const { data } = await axios.post(apis.feeds, feedData);
 
     // console.log("data in setFeedDataAsync", data);
 
@@ -75,7 +76,7 @@ export const setFeedDataAsync = (feedData) => async (dispatch) => {
 export const setNewFeedDataAsync = (feedData) => async (dispatch) => {
   try {
     dispatch(newLoading(true));
-    const { data } = await axios.post(`/api/blog/feeds`, feedData);
+    const { data } = await axios.post(apis.feeds, feedData);
     // console.log("data in setNewFeedDataAsync", data);
 
     dispatch(setNewFeedData(data));
@@ -88,7 +89,7 @@ export const setNewFeedDataAsync = (feedData) => async (dispatch) => {
 export const setAdminFeedDataAsync = (feedData) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const { data } = await axios.post(`/api/feeds/fullfeeds`, feedData);
+    const { data } = await axios.post(apis.fullFeeds, feedData);
 
     const dataToSort = [
       ...data.results.blog,
@@ -112,7 +113,7 @@ export const setAdminFeedDataAsync = (feedData) => async (dispatch) => {
 export const setNewAdminFeedDataAsync = (feedData) => async (dispatch) => {
   try {
     dispatch(newLoading(true));
-    const { data } = await axios.post(`/api/feeds/fullfeeds`, feedData);
+    const { data } = await axios.post(apis.fullFeeds, feedData);
 
     const dataToSort = [
       ...data.results.blog,
@@ -137,7 +138,7 @@ export const searchFeedDataAsync = (feedData) => async (dispatch) => {
   console.log('setNewFeedDataAsync inside reduxSlice', feedData);
   // try {
   //   dispatch(newLoading(true));
-  //   const { data } = await axios.post(`/api/blog/feeds`, feedData);
+  //   const { data } = await axios.post(apis.feeds, feedData);
 
   //   const dataToSort = [
   //     ...data.results.blog,

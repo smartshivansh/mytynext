@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { Dialog } from "@headlessui/react";
 import CardStyles from "./Card.module.css";
 import { Carousel } from "react-responsive-carousel";
@@ -8,17 +9,17 @@ import ImageCardPreview from "./ImageCardPreview";
 // import { getSubdomainFromUser } from "./feedsCard.functions";
 import FeedsCardAvatar from "./FeedsCardAvatar";
 import { useInView } from "react-intersection-observer";
-import { ReactComponent as ShareIcon } from "bootstrap-icons/icons/share.svg";
+import ShareIcon from "bootstrap-icons/icons/share.svg";
 import CardShareDialog from "./CardShareDialog";
-import { ReactComponent as MenuIcon } from "bootstrap-icons/icons/three-dots.svg";
+import MenuIcon from "bootstrap-icons/icons/three-dots.svg";
 
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
 import classes from "./AdminBlogItem.module.css";
-import "bootstrap/js/dist/modal";
+// import "bootstrap/js/dist/modal.js";
 import { ReactComponent as OptionsIcon } from "bootstrap-icons/icons/three-dots.svg";
-import { ReactComponent as DownloadIcon } from "bootstrap-icons/icons/download.svg";
+import DownloadIcon from "bootstrap-icons/icons/download.svg";
 
 export default function FeedsImageCard({ data, ref, inView }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +88,7 @@ export default function FeedsImageCard({ data, ref, inView }) {
                         setShareDialog(true);
                       }}
                     >
-                      <ShareIcon className="me-2" />
+                      <Image src={ShareIcon} className="me-2" />
                       <span className="sidebar-menu-link">Share</span>
                     </div>
                     <div
@@ -102,7 +103,7 @@ export default function FeedsImageCard({ data, ref, inView }) {
                         }, 2000);
                       }}
                     >
-                      <DownloadIcon className="me-2" />
+                      <Image src={DownloadIcon} className="me-2" />
                       {downloading ? (
                         <span className="sidebar-menu-link">
                           Please wait...
@@ -114,7 +115,7 @@ export default function FeedsImageCard({ data, ref, inView }) {
                   </div>
                 }
               >
-                <MenuIcon className="me-0" width="30" height="30"></MenuIcon>
+                <Image src={MenuIcon} className="me-0" width="30" height="30" />
               </Tippy>
             </div>
           </div>

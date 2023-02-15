@@ -1,0 +1,13 @@
+# POST http://localhost:8080/api/auth/login/email-password HTTP/1.1
+# Content-type: application/json
+# {
+#   "email": "rupamkairi@gmail.com",
+#   "password": "@Rupam12345"
+# }
+
+POST http://localhost:8080/api/auth/login/mobile-otp/send HTTP/1.1
+content-type: application/json
+{
+  "mobile": "8513920832",
+  "hash": "XXXxxxyZ"
+}

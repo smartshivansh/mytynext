@@ -1,13 +1,13 @@
-.cards .card-options {
+.cards .card-options .card_options {
   visibility: hidden;
 }
 
-.cards:hover .card-options {
+.cards:hover .card-options .card_options  {
   visibility: visible;
 }
 
 @media only screen and (max-width: 1025px) {
-  .cards .card-options {
+  .cards .card-options .card_options  {
     visibility: visible;
   }
 }

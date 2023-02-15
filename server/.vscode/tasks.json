@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "myty-client build staging",
+      "type": "shell",
+      "command": "npm run build-staging --prefix myty-client",
+      "problemMatcher": []
+    },
+    {
+      "label": "myty-client build production",
+      "type": "shell",
+      "command": "npm run build-production --prefix myty-client",
+      "problemMatcher": []
+    },
+    {
+      "label": "Push",
+      "type": "shell",
+      "command": "git push",
+      "problemMatcher": []
+    }
+  ]
+}

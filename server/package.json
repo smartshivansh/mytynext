@@ -1,0 +1,59 @@
+{
+  "name": "myty",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix myty-client",
+    "c-client": "npm run c-start --prefix myty-client",
+    "dev": "concurrently -p [{name}] -n \"server,myty-client\" -c \"magenta,blue\" \"npm run server\" \"npm run client\"",
+    "c-dev": "concurrently -p [{name}] -n \"server,myty-client\" -c \"magenta,blue\" \"npm run server\" \"npm run c-client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix myty-client && npm run build --prefix myty-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doions-team/myty.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doions-team/myty/issues"
+  },
+  "homepage": "https://github.com/doions-team/myty#readme",
+  "dependencies": {
+    "aws-sdk": "^2.924.0",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-subdomain": "^1.0.5",
+    "firebase-admin": "^10.0.2",
+    "google-auth-library": "^7.11.0",
+    "is-image": "^3.0.0",
+    "is-url": "^1.2.4",
+    "is-video": "^1.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "metadata-scraper": "^0.2.34",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.13",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "node-wget": "^0.4.3",
+    "nodemailer": "^6.6.1",
+    "random-number": "0.0.9",
+    "razorpay": "^2.0.7",
+    "redis": "^3.1.2",
+    "socket.io": "^4.1.2",
+    "typesense": "^1.0.2",
+    "winston": "^3.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "kill-port": "^1.6.1",
+    "nodemon": "^2.0.7"
+  }
+}

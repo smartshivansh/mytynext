@@ -6,6 +6,7 @@ import {
 } from "../../../store/mediaSlice";
 
 // import Plyr from "plyr-react";
+import "plyr/dist/plyr.css"
 import Plyr from "plyr";
 import options from "./options";
 

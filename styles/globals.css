@@ -38,6 +38,9 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --plyr-color-main: #ffc700;
+  --plyr-video-background: #ffc700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,4 +107,27 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+.plyr--full-ui input[type=range] {
+  color: #ffc700 !important;
+}
+
+.plyr__control--overlaid {
+  background: rgba(#ffc700, .8) !important;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+  background: #ffc700 !important;
+}
+
+.plyr__control.plyr__tab-focus { 
+  box-shadow: 0 0 0 5px rgba(#ffc700, .5) !important;
+}
+
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+  background: #ffc700 !important;
 }

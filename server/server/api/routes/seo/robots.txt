@@ -1,0 +1,15 @@
+User-Agent: *
+
+Disallow: /explore
+Disallow: /admin/dashboard/feeds/
+Disallow: /blog/[slug]
+Disallow: /[page]
+
+Allow: /about
+Allow: /faqs
+Allow: /pricing
+Allow: /help-support
+Allow :/sitemap/*
+
+
+Sitemap: https://myty.in/sitemap/sitemap.xml

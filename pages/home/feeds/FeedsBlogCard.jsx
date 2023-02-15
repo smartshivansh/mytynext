@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { useRouteMatch } from "react-router-dom";
+// import { useRoute} from "react-router"
 import FeedsCardAvatar from "./FeedsCardAvatar";
 import ShareIcon from "bootstrap-icons/icons/share.svg";
 
@@ -15,13 +15,13 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
 
-import "bootstrap/js/dist/modal";
+// import "bootstrap/js/dist/modal.js";
 import DownloadIcon from "bootstrap-icons/icons/download.svg";
 
 export default function FeedsBlogCard({ item, ref, inView }) {
-  const { path } = useRouteMatch();
-  const url_segments = path.split("/");
-  const orignalPath = url_segments[url_segments.length - 1];
+  // const { path } = useRouteMatch();
+  // const url_segments = path.split("/");
+  // const orignalPath = url_segments[url_segments.length - 1];
   const [shareDialog, setShareDialog] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
@@ -61,7 +61,7 @@ export default function FeedsBlogCard({ item, ref, inView }) {
                       setShareDialog(true);
                     }}
                   >
-                    <ShareIcon className="me-2" />
+                    <Image src={ShareIcon} className="me-2" />
                     <span className="sidebar-menu-link">Share</span>
                   </div>
                   <a

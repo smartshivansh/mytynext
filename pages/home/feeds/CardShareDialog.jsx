@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Dialog } from "@headlessui/react";
-import { ReactComponent as CancelIcon } from "bootstrap-icons/icons/x.svg";
 import card from "./Card.module.css";
 import {
   FacebookShareButton,

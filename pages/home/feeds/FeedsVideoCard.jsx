@@ -1,16 +1,20 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import VideoCardPreview from "./VideoCardPreview";
+import PersonIcon from "bootstrap-icons/icons/person-circle.svg";
 import FeedsCardAvatar from "./FeedsCardAvatar";
-import { ReactComponent as ShareIcon } from "bootstrap-icons/icons/share.svg";
+// import CopyLink from "./CopyLink";
+import ShareIcon from "bootstrap-icons/icons/share.svg";
 import CardShareDialog from "./CardShareDialog";
-import { ReactComponent as MenuIcon } from "bootstrap-icons/icons/three-dots.svg";
+import MenuIcon from "bootstrap-icons/icons/three-dots.svg";
 
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
-import classes from "./AdminBlogItem.module.css";
-import "bootstrap/js/dist/modal";
-import { ReactComponent as DownloadIcon } from "bootstrap-icons/icons/download.svg";
+import classes from  "./AdminBlogItem.module.css";
+// import "bootstrap/js/dist/modal";
+import OptionsIcon from "bootstrap-icons/icons/three-dots.svg";
+import DownloadIcon from "bootstrap-icons/icons/download.svg";
 
 export default function FeedsVideoCard({ data, ref, inView }) {
   const [shareDialog, setShareDialog] = useState(false);
@@ -32,7 +36,7 @@ export default function FeedsVideoCard({ data, ref, inView }) {
             )}
           </div>
           <div className="col-2  d-flex justify-content-end p-0 m-0 ">
-            <div className="text-end card-options h-100 w-100 p-0">
+            <div className={`text-end ${classes.card_options} h-100 w-100 p-0`}>
               <Tippy
                 zIndex="8"
                 trigger="focus"
@@ -47,7 +51,7 @@ export default function FeedsVideoCard({ data, ref, inView }) {
                         setShareDialog(true);
                       }}
                     >
-                      <ShareIcon className="me-2" />
+                      <Image src={ShareIcon} className="me-2" />
                       <span className="sidebar-menu-link">Share</span>
                     </div>
                     <a
@@ -63,7 +67,7 @@ export default function FeedsVideoCard({ data, ref, inView }) {
                         }, 2000);
                       }}
                     >
-                      <DownloadIcon className="me-2" />
+                      <Image src={DownloadIcon} className="me-2" />
                       {downloading ? (
                         <span className="sidebar-menu-link">
                           Please wait...
@@ -75,7 +79,7 @@ export default function FeedsVideoCard({ data, ref, inView }) {
                   </div>
                 }
               >
-                <MenuIcon className="me-0" width="30" height="30"></MenuIcon>
+                <Image src={MenuIcon} className="me-0" width="30" height="30" />
               </Tippy>
             </div>
           </div>

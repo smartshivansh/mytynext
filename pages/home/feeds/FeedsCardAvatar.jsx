@@ -3,7 +3,7 @@ import Image from "next/image";
 import PersonIcon from "bootstrap-icons/icons/person-circle.svg";
 import { getSubdomainFromUser } from "./feedsCard.functions";
 import WebsitePreview from "./WebsitePreview";
-import classes from "./TailwindEqTransitions.module.css";
+// import classes from "./TailwindEqTransitions.module.css";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";

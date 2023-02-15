@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FeedsBlogCard from "./FeedsBlogCard";
-// import FeedsImageCard from "./FeedsImageCard";
-// import FeedsLinkCard from "./FeedsLinkCard";
-// import FeedsQuoteCard from "./FeedsQuoteCard";
-// import FeedsVideoCard from "./FeedsVideoCard";
+import FeedsImageCard from "./FeedsImageCard";
+import FeedsLinkCard from "./FeedsLinkCard";
+import FeedsQuoteCard from "./FeedsQuoteCard";
+import FeedsVideoCard from "./FeedsVideoCard";
 import { useInView } from "react-intersection-observer";
 
 export default function FeedsCard({ data }) {

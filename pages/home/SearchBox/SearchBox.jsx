@@ -1,27 +1,20 @@
 import React, {
   useState,
   useEffect,
+  useMemo,
   useCallback,
   useRef,
 } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import {
   setSearchDataAsync,
   setSearchSuggestionDataAsync,
 } from "../../../store/SearchSlice";
 import debounce from "lodash.debounce";
-import { useLocation } from "react-router";
-import routes from "../constants/routes";
 import { Combobox } from "@headlessui/react";
 
-
-import { Router } from "react-router"
-
-
 export default function SearchBox({ queryParam }) {
-  // let { pathname } = useLocation() ? useLocation(): false;
-  let pathname = true;
-
 
   const dispatch = useDispatch();
   const { searchSuggestion, suggestionLoading } = useSelector(
@@ -38,17 +31,14 @@ export default function SearchBox({ queryParam }) {
 
   useEffect(() => {
     if (queryParam) {
-      // console.log("search with ", queryParam);
       query.current = queryParam;
       dispatch(setSearchDataAsync(query.current));
     } else {
-      // console.log("No search");
     }
   }, [queryParam]);
 
   const debouncedChangeHandler = useCallback(
     debounce((input) => {
-      // console.log(" inside debounce  ", query.current);
       dispatch(setSearchSuggestionDataAsync(query.current));
     }, 1000),
     [query.current]
@@ -85,10 +75,7 @@ export default function SearchBox({ queryParam }) {
   }, [inputValue, debounceQuery]);
 
   return (
-    <Router>
-      {(pathname === routes.feeds ||
-        pathname === routes.explore ||
-        pathname === routes.index) && (
+    <>
         <div className="mb-4">
           <Combobox
             value={selectedValue}
@@ -106,22 +93,23 @@ export default function SearchBox({ queryParam }) {
             <div className="d-flex ">
               <div className="w-100">
                 <div className="form-control rounded-3 border-2 d-flex align-items-center">
+            
                   <Combobox.Input
                     className="form-control border-0 ps-4"
                     placeholder="Search anything..."
                     autoComplete="off"
                     displayValue={inputValue}
                     onChange={(e) => {
-                      // console.log('inside combobox input', e);
+                      
                       setInputValue(e.target.value);
                     }}
-                    // onKeyUp={handleKey}
+                    
                   />
 
                   <button
                     className={`btn ${selectedValue ? "invisible" : ""}`}
                     onClick={() => {
-                      // setSelectedValue(inputValue);
+                      
                       dispatch(setSearchDataAsync(inputValue));
                     }}
                   >
@@ -201,9 +189,7 @@ export default function SearchBox({ queryParam }) {
             </div>
           </Combobox>
         </div>
-      )}
-
-     
-    </Router>
+      
+    </>
   );
 }
